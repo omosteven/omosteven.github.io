@@ -512,14 +512,13 @@ ethereum.enable()
 <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
 <script>
     var wallet = document.getElementById("walletAddress").innerHTML;
-    var e = 'ethereum:'
-    var es = e.concat(wallet);
+  
     (function($) {
         var widget = new Wyre({
             env: 'test',
             operation: {
                 type: 'debitcard-hosted-dialog',
-                dest: es,
+                dest: 'ethereum:' + wallet,
                 destCurrency: 'ETH',
                 sourceAmount: 50,
                 paymentMethod: 'debit-card'
