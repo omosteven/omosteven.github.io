@@ -100,8 +100,8 @@
                     <li class="nav-item" id="foodAnalysis"><a class="sidebar-link" href="food-analysis/"><span class="icon-holder"><i class="c-indigo-500 ti-bar-chart"></i> </span><span class="title">Food Analysis</span></a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-orange-500 ti-layout-list-thumb"></i> </span><span class="title">Actions</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="sidebar-link" href="basic-table.html">Orders</a></li>
-                            <li><a class="sidebar-link" href="datatable.html">Favorites</a></li>
+                            <li><a class="sidebar-link" href="#">Orders</a></li>
+                            <li><a class="sidebar-link" href="#">Favorites</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle" href="javascript:void(0);"><span class="icon-holder"><i class="c-purple-500 ti-map"></i> </span><span class="title">Maps</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
@@ -360,18 +360,6 @@
                                                             <div class="progress-bar bgc-green-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">450k</span></div>
                                                         </div>
                                                     </div>
-                                                    <div class="layer w-100 mT-15">
-                                                        <h5 class="mB-5">450k</h5><small class="fw-600 c-grey-700">Visitors From Australia</small> <span class="pull-right c-grey-600 fsz-sm">40%</span>
-                                                        <div class="progress mT-10">
-                                                            <div class="progress-bar bgc-light-blue-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:40%"><span class="sr-only">40% Complete</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="layer w-100 mT-15">
-                                                        <h5 class="mB-5">1B</h5><small class="fw-600 c-grey-700">Visitors From India</small> <span class="pull-right c-grey-600 fsz-sm">90%</span>
-                                                        <div class="progress mT-10">
-                                                            <div class="progress-bar bgc-blue-grey-500" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:90%"><span class="sr-only">90% Complete</span></div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div>Food Growth Analysis</div>
 
@@ -518,7 +506,7 @@
             env: 'test',
             operation: {
                 type: 'debitcard-hosted-dialog',
-                dest: 'ethereum:' + wallet,
+                dest: 'ethereum: #{wallet}',
                 destCurrency: 'ETH',
                 sourceAmount: 50,
                 paymentMethod: 'debit-card'
