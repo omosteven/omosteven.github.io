@@ -19,17 +19,17 @@ ethereum.enable()
           console.log("Using web wallet");
 
           console.log("address = " + web3.eth.coinbase);
-
-          button = document.getElementById("buttonBalance")
-          button.onclick = function tmp()
-          {
-              web3.eth.getBalance(
-                  web3.eth.coinbase,
-                  function tmp2 (balance)
-                  {
-                    console.log("balance=" + balance);
-                  });
-          };
+    document.getElementById("walletAddress").innerHTML = web3.eth.coinbase;
+       //   button = document.getElementById("buttonBalance")
+       //   button.onclick = function tmp()
+        //  {
+             // web3.eth.getBalance(
+               //   web3.eth.coinbase,
+                //  function tmp2 (balance)
+               //   {
+                 //   console.log("balance=" + balance);
+            //      });
+        };
       }
 
       })  </script>
