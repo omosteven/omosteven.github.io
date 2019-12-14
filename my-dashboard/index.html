@@ -244,7 +244,7 @@
                         <div class="masonry-item w-100">
                             <div class="row gap-20">
 
-                                <div class="col-md-4" style="border:1px solid rgb(0,0,70)">
+                                <div class="col-md-3" style="border:1px solid rgb(0,0,70)">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h6 class="lh-1">ACCOUNT TYPE</h6>
@@ -258,7 +258,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4" style="border:1px solid rgb(0,0,70)">
+                                <div class="col-md-6" style="border:1px solid rgb(0,0,70)">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h6 class="lh-1">WALLET AMOUNT(50ETH)</h6>
@@ -303,7 +303,7 @@ ethereum.enable()
                                         background-color: red;
                                     }
                                 </style>
-                                <div class="col-md-4" style="border:1px solid rgb(0,0,70)">
+                                <div class="col-md-3" style="border:1px solid rgb(0,0,70)">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
                                             <h6 class="lh-1">UNIQUE CODE</h6>
@@ -511,12 +511,13 @@ ethereum.enable()
 
 <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
 <script>
+    var wallet = document.getElementById("walletAddress").innerHTML;
     (function($) {
         var widget = new Wyre({
             env: 'test',
             operation: {
                 type: 'debitcard-hosted-dialog',
-                dest: 'ethereum:0xE6735ec520b1B729747ECA6b56823f78d9E20D17',
+                dest: 'ethereum:wallet',
                 destCurrency: 'ETH',
                 sourceAmount: 50,
                 paymentMethod: 'debit-card'
