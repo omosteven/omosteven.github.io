@@ -555,8 +555,11 @@
     }
     axios({
             method: 'POST',
-            url: "https://agrichainx.com/foodev-apis/fetchuserdetails.php",
-
+            url: "https://cors-anywhere.herokuapp.com/https://agrichainx.com/foodev-apis/fetchuserdetails.php",
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': window.csrf_token
+            },
 
             data: dataString
 
