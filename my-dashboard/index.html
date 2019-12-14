@@ -257,35 +257,7 @@
                                         </div>
                                     </div>
                                 </div>
-     <script type="text/javascript" src="web3.min.js"></script>
-    <script type="text/javascript">
-ethereum.enable()
-      window.addEventListener("load", function() {
 
-      if (typeof web3 === "undefined") {
-
-          console.log("No web3 provider found");
-
-      } else {
-
-          web3 = new Web3(web3.currentProvider);
-          console.log("Using web wallet");
-
-          console.log("address = " + web3.eth.coinbase);
-    document.getElementById("walletAddress").innerHTML = web3.eth.coinbase;
-       //   button = document.getElementById("buttonBalance")
-       //   button.onclick = function tmp()
-        //  {
-             // web3.eth.getBalance(
-               //   web3.eth.coinbase,
-                //  function tmp2 (balance)
-               //   {
-                 //   console.log("balance=" + balance);
-            //      });
-        };
-      }
-
-      })  </script>
                                 <div class="col-md-4" style="border:1px solid rgb(0,0,70)">
                                     <div class="layers bd bgc-white p-20">
                                         <div class="layer w-100 mB-10">
@@ -301,6 +273,36 @@ ethereum.enable()
                                         </div>
                                     </div>
                                 </div>
+                                     <script type="text/javascript" src="web3.min.js"></script>
+    <script type="text/javascript">
+ethereum.enable()
+      window.addEventListener("load", function() {
+
+      if (typeof web3 === "undefined") {
+
+          console.log("No web3 provider found");
+
+      } else {
+
+          web3 = new Web3(web3.currentProvider);
+          console.log("Using web wallet");
+
+          console.log("address = " + web3.eth.coinbase);
+          var wallet =  web3.eth.coinbase;
+document.getElementById("walletAddress").innerHTML=wallet;
+       //   button = document.getElementById("buttonBalance")
+       //   button.onclick = function tmp()
+        //  {
+             // web3.eth.getBalance(
+               //   web3.eth.coinbase,
+                //  function tmp2 (balance)
+               //   {
+                 //   console.log("balance=" + balance);
+            //      });
+        };
+      }
+
+      })  </script>
                                 <style>
                                     #fund:hover {
                                         cursor: pointer;
