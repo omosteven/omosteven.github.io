@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FooDev - Registration</title>
+    <meta name="viewport" content="width=device-width, block;-scale=1.0">
+    <meta name="author" content="colorlib.com">
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        .signIn {
+            color: white;
+            background-color: rgb(0, 0, 70);
+            height: 3.5em;
+            width: 10em;
+            font-weight: bold;
+            border: 1px solid white;
+            border-radius: 2em;
+        }
+        
+        .signIn:hover {
+            background-color: rgba(0, 0, 70, .8);
+            border: 5px solid white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body style="background-image:url(../assets/images/foodev1.jpg);">
+    <div class="wrapper" style="background-color: rgba(0, 0, 0, .4);">
+        <div class="image-holder">
+            <!-- <img src="images/mother-bg3.jpeg" style = "height:100%;margin-top:-65em;z-index:1"> -->
+            <img src="../home/images/foodev" style="margin-top:-65em" />
+            <h4 style="color:white;margin-top:-11.9em;text-align:center;font-size:2.2em;margin-left:0.4em">FooDev</h4>
+        </div>
+        <form action="" id="register" enctype="multipart/form-data">
+            <div class="form-header" style="margin-top:2em">
+                <h3>Welcome!</h3>
+            </div>
+            <div class="form-header" id="feedback" style="color:red">
+            </div>
+            <div id="wizard">
+                <!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <div class="form-row" style="color:white;font-size:1.2em">Can we have your personal details?</div>
+                    <div class="form-row">
+                        <label for="">FIRST NAME:</label>
+                        <div class="form-holder">
+                            <input type="text" name="firstName" placeholder="first name" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">LAST NAME:</label>
+                        <div class="form-holder">
+                            <input type="text" name="lastName" placeholder="last name" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">EMAIL:</label>
+                        <div class="form-holder">
+                            <input type="text" name="email" id="email" placeholder="email" class="form-control" oninput="emailInput()" required>
+                            <div class="form-holder" id="invalidEmail" style="color:red">Invalid Email</div>
+
+                        </div>
+                        <script>
+                            //document.getElementById('verify').style.display = "none";
+
+                            var email = document.getElementById('email');
+                            invalidEmail.style.display = 'none';
+
+                            function isEmailValid(emailAddr) {
+
+                                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddr);
+                            }
+
+                            function emailInput() {
+
+                                if (isEmailValid(email.value)) {
+
+                                    email.style.backgroundColor = 'transparent';
+
+
+                                    invalidEmail.style.display = 'none';
+                                    sdbmCode = function(str1) {
+                                        var hash = 0;
+                                        for (i = 0; i < str1.length; i++) {
+
+                                            char = str1.charCodeAt(i);
+                                            hash = char + (hash << 3) + (hash << 5) - hash;
+                                        }
+                                        return Math.abs(hash);
+                                    }
+
+                                    document.getElementById("uniqueCode").value = sdbmCode(document.getElementById("email").value);
+
+                                    //signup.disabled = false;
+
+                                } else {
+
+                                    email.style.backgroundColor = 'red';
+
+                                    invalidEmail.style.display = 'initial';
+
+                                    //signup.disabled = true;
+
+                                }
+                            }
+                        </script>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">PASSWORD:</label>
+                        <div class="form-holder">
+                            <input type="password" name="password" id="password" placeholder="password" class="form-control" oninput="passwordInput()" required>
+                            <div class="form-holder" id="invalidPassword" style="color:red">Invalid Password</div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">CONFIRM PASSWORD:</label>
+                        <div class="form-holder">
+                            <input type="password" id="cpassword" placeholder="Enter Password Again" class="form-control" oninput="cpasswordInput()" required>
+                            <div id="unmatched" class="form-holder" style="color:red">Passwords did not match</div>
+
+                        </div>
+                    </div>
+                    <script>
+                        var password = document.getElementById('password');
+
+                        var cpassword = document.getElementById('cpassword');
+
+                        var signup = document.getElementById('submit');
+
+                        var invalidPassword = document.getElementById('invalidPassword');
+
+                        invalidPassword.style.display = 'none';
+
+                        unmatched.style.display = 'none';
+
+
+                        function passwordInput() {
+
+                            if (password.value.length < 8) {
+
+                                password.style.backgroundColor = 'red';
+
+                                signup.disabled = true;
+
+                                invalidPassword.style.display = 'initial';
+
+                            } else {
+
+                                password.style.backgroundColor = 'transparent';
+
+                                signup.disabled = false;
+
+                                invalidPassword.style.display = 'none';
+
+                                cpasswordInput();
+
+                            }
+                        }
+
+                        function cpasswordInput() {
+
+                            if (password.value != cpassword.value) {
+
+                                cpassword.style.backgroundColor = 'red';
+
+                                //signup.disabled = true;
+
+                                unmatched.style.display = 'initial';
+
+                            } else {
+
+                                cpassword.style.backgroundColor = 'transparent';
+
+                                //signup.disabled = false;
+
+                                unmatched.style.display = 'none';
+
+                            }
+                        }
+                    </script>
+
+                    <div class="form-row" style="margin-bottom: 50px;">
+                        <label for="">
+                                GENDER:
+                            </label>
+                        <div class="form-holder">
+                            <div class="checkbox-circle">
+                                <label class="male">
+                                        <input type="radio" name="gender"
+                                            value="male" checked> Male<br>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                <label class="female">
+                                        <input type="radio" name="gender"
+                                            value="female"> Female<br>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                <label>
+                                        <input type="radio" name="gender"
+                                            value="transgender">Transgender<br>
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- SECTION 2 -->
+                <h4></h4>
+                <section>
+                    <div class="form-row" style="color:white;font-size:1.2em">You're a way to almost done...</div>
+
+                    <!-- <div class="form-row">
+                        <label for="">
+	                    		Date of Birth:
+	                    	</label>
+                        <div class="form-holder">
+                            <input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" id="dp1">
+                        </div>
+                    </div> -->
+
+                    <div class="form-row">
+                        <label for="">PHONE NUMBER:</label>
+                        <div class="form-holder">
+                            <input type="text" name="phoneNumber" placeholder="phone number" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">HOME ADDRESS:</label>
+                        <div class="form-holder">
+                            <input type="text" name="homeAddress" placeholder="home address" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">OFFICE ADDRESS:</label>
+                        <div class="form-holder">
+                            <input type="text" name="officeAddress" placeholder="office address" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="">CITY/STATE:</label>
+                        <div class="form-holder">
+                            <input type="text" name="cityState" placeholder="AKURE/ONDO" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="">COUNTRY:</label>
+                        <div class="form-holder">
+                            <input type="text" name="country" placeholder="Country" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row" style="display: none;">
+                        <label for="">
+                                AUTOGENERATED UNIQUE ID:
+                            </label>
+                        <div class="form-holder">
+                            <input type="text" name="uniqueCode" id="uniqueCode" class="form-control" required>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                    </script>
+
+
+                </section>
+
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section>
+                    <div class="form-row" style="color:white;font-size:1.2em">Yea you're almost done...</div>
+
+                    <div class="form-row">
+                        <label for="">REGISTERING AS?:
+                            </label>
+                        <div class="form-holder">
+                            <select name="accountType" id="accountType" onchange="pickAccount()" class="form-control">
+                                    <option value="CONSUMER" class="option">NORMAL USER</option>
+                                    <option value="FOOD VENDOR" class="option" selected>FOOD
+                                        VENDOR</option>
+                                    <option value="FOOD RIDER" class="option">FOOD
+                                        CARRIER</option>
+                                </select>
+                            <i class="zmdi zmdi-caret-down"></i>
+                        </div>
+                    </div>
+                    <script>
+                        var accountType = document.getElementById("accountType");
+
+                        var pickDoc = document.getElementById("pickDoc");
+
+                        var uploadDoc = document.getElementById("uploadDoc");
+
+                        //pickDoc.style.display = "none";
+
+                        //uploadDoc.style.display = "none";
+
+
+
+                        function pickAccount() {
+
+                            if (document.getElementById("accountType").value == "normalUser") {
+                                //console.log(pickDoc.style.display);
+
+                                //alert("hey");
+
+
+                                pickDoc.style.display = "none";
+
+                                uploadDoc.style.display = "none";
+
+
+                            }
+                            if (document.getElementById("accountType").value == "foodVendor") {
+
+                                //alert("hey");
+
+                                pickDoc.style.display = "inline-flexbox";
+
+                                uploadDoc.style.display = "inline-flexbox";
+
+
+                            }
+
+                        }
+                    </script>
+
+                    <div class="form-row" id="pickDoc">
+                        <label for="">SELECT DOCUMENT:
+                            </label>
+                        <div class="form-holder">
+                            <select name="documentType" id="" class="form-control">
+                                    <option value="nationalID" class="option" selected>NATIONAL
+                                        ID CARD</option>
+                                    <option value="passport" class="option">PASSPORT</option>
+                                    <option value="votersCard" class="option">VOTER'S
+                                        CARD</option>
+                                </select>
+                            <i class="zmdi zmdi-caret-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-row" id="uploadDoc">
+                        <label for="">UPLOAD DOCUMENT:
+                            </label>
+                        <div class="form-holder">
+                            <input type="file" name="documentName" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <label for="">PROFILE IMAGE:
+                            </label>
+                        <div class="form-holder">
+                            <input type="file" name="profileImage" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-circle" style="margin-bottom:
+                            48px;">
+                        <label>
+                                <input type="checkbox" checked>I agree all
+                                statement in Terms & Conditions
+                                <span class="checkmark"></span>
+                            </label>
+                    </div>
+
+
+                    <div style="float:right;margin-top:0em"><button class="signIn" id="submit">Submit</button></div>
+
+                </section>
+
+
+            </div>
+            <div style="float:right;margin-top:0em;color:white"><a href="../signin/" style="color:white">Already got an account?</a></div>
+
+        </form>
+    </div>
+
+
+
+    <!-- JQUERY STEP -->
+    <script src="js/jquery.steps.js"></script>
+
+    <!-- DATE-PICKER -->
+
+    <script src="js/main.js"></script>
+    <script src="../js/axios.js"></script>
+    <script>
+        feedBack = document.getElementById("feedback");
+
+        feedBack.style.display = "none";
+
+        submit = document.getElementById("submit");
+
+        $("#register").on('submit', function(event) {
+
+            event.preventDefault(); //prevent default action 
+
+            feedBack.style.display = "none";
+
+            //if(Resume.type == "image/png"  Resume.type == "image/png")
+            const urlLink = "http://localhost/food-delivery/php/auth/register.php";
+
+            submit.innerHTML = "Submitting...";
+
+            axios({
+
+
+                method: 'POST',
+
+                url: urlLink,
+
+                data: new FormData(this)
+
+            })
+
+            .then(function(response) {
+
+
+                feedBack.style.display = "initial";
+
+                feedBack.innerHTML = "Thanks for creating an account with us. Kindly login and enjoy good food hygiene";
+
+                document.querySelector("register").clear;
+
+
+
+                //submit.innerHTML = "Submit";
+
+                //alert("done")
+
+            })
+
+            .catch(function(err) {
+
+                feedBack.style.display = "initial";
+
+                if (err.response.data.response == "invalid_doc") {
+
+                    feedBack.innerHTML = "Sorry, an error was encountered with the documents to upload";
+
+                } else if (err.response.data.response == "existing_account") {
+
+                    feedBack.innerHTML = "Sorry,the email alraedy exists with us";
+
+                } else {
+                    feedBack.innerHTML = "Sorry, an error was encountered while submitting form";
+
+                }
+
+                // alert("error");
+
+                //submit.innerHTML = "Submit";
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
+
+</script>

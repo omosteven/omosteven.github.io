@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FooDev - Sign Into Account</title>
+    <meta name="viewport" content="width=device-width, block;-scale=1.0">
+    <meta name="author" content="colorlib.com">
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="../register/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+    <!-- DATE-PICKER -->
+    <link rel="stylesheet" href="../register/date-picker/css/datepicker.min.css">
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="../register/css/style.css">
+
+    <style>
+        .signIn {
+            color: white;
+            background-color: transparent;
+            height: 2.5em;
+            width: 10em;
+            font-weight: bold;
+            border: 1px solid white;
+            border-radius: 1em;
+        }
+        
+        .signIn:hover {
+            background-color: rgb(0, 0, 70);
+            border: none;
+        }
+    </style>
+</head>
+
+<body style="background-image:url(../assets/images/foodev1.jpg);">
+    <div class="wrapper" style="background-color: rgba(0, 0, 0, .4);">
+        <div class="image-holder">
+            <!-- <img src="images/mother-bg3.jpeg" style = "height:100%;margin-top:-55em;z-index:1"> -->
+            <img src="../home/images/foodev" style="margin-top:-35em" />
+            <h4 style="color:white;margin-top:-5.03em;text-align:center;font-size:2.2em;margin-left:0.4em">FooDev</h4>
+        </div>
+        <form method="POST" id="signin">
+            <div class="form-header">
+                <h3>Welcome Back!</h3>
+            </div>
+            <div class="form-header" style="color:red;text-align: center;">
+                <h3 id="feedback" style="font-size:1em"></h3>
+            </div>
+            <div id="wizard">
+                <section>
+
+
+                    <div class="form-row">
+                        <label for="">EMAIL:</label>
+                        <div class="form-holder">
+                            <input type="text" name="email" placeholder="email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="">PASSWORD:</label>
+                        <div class="form-holder">
+                            <input type="password" name="password" placeholder="Your Password" class="form-control">
+                        </div>
+                    </div>
+
+                </section>
+                <div style="float:right;margin-top:4em"><button class="signIn" id="submit">Sign In</button></div>
+
+            </div>
+
+            <div style="float:right;margin-top:5em;color:white"><a href="../register/" style="color:white">Don't have an account?</a></div>
+
+
+        </form>
+
+    </div>
+    <script>
+    </script>
+
+    <script src="../register/js/jquery-3.3.1.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="../register/js/jquery.steps.js"></script>
+
+    <!-- DATE-PICKER -->
+    <script src="../register/date-picker/js/datepicker.js"></script>
+    <script src="../register/date-picker/js/datepicker.en.js"></script>
+
+    <script src="../register/js/main.js"></script>
+    <script src="../js/axios.js"></script>
+    <script>
+        feedBack = document.getElementById("feedback");
+
+        feedBack.style.display = "none";
+
+        submit = document.getElementById("submit");
+
+        $("#signin").on('submit', function(event) {
+
+            event.preventDefault(); //prevent default action 
+
+            feedBack.style.display = "none";
+
+            //if(Resume.type == "image/png"  Resume.type == "image/png")
+            const urlLink = "http://localhost/food-delivery/php/auth/signin.php";
+
+            submit.innerHTML = "Submitting...";
+
+            axios({
+
+
+                method: 'POST',
+
+                url: urlLink,
+
+                data: new FormData(this)
+
+            })
+
+            .then(function(response) {
+
+                sessionStorage.setItem("loginID", response.data.uniqueCode);
+                sessionStorage.setItem("loginEmail", response.data.email);
+                location.replace("../my-dashboard");
+                //console.log(response)
+
+
+            })
+
+            .catch(function(err) {
+
+                feedBack.style.display = "initial";
+                console.log(err);
+
+                if (err.response.data.response == "incorrect") {
+
+                    feedBack.innerHTML = "Incorrect login details";
+
+                } else {
+                    feedBack.innerHTML = "Sorry, an error was encountered while signing in";
+
+                }
+
+                submit.innerHTML = "Submit";
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
