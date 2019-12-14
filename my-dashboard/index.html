@@ -284,12 +284,12 @@ ethereum.enable()
 
       } else {
 
-          web3 = new Web3(web3.currentProvider);
+          w = new Web3(web3.currentProvider);
           console.log("Using web wallet");
 
-          console.log("address = " + web3.eth.coinbase);
-          var wallet =  web3.eth.coinbase;
-document.getElementById("walletAddress").innerHTML=wallet;
+          console.log("address = " + w.eth.coinbase);
+          wallet =  w.eth.coinbase;
+           document.getElementById("walletAddress").innerHTML= wallet;
        //   button = document.getElementById("buttonBalance")
        //   button.onclick = function tmp()
         //  {
