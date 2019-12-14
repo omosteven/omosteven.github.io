@@ -263,6 +263,7 @@
                                         <div class="layer w-100 mB-10">
                                             <h6 class="lh-1">WALLET AMOUNT(50ETH)</h6>
                                         </div>
+                                        
                                         <div class="layer w-100">
                                             <div class="peers ai-sb fxw-nw">
                                                 
@@ -549,6 +550,36 @@
         .catch(err => {
             console.log(err);
         })
+    
+     <script type="text/javascript" src="web3.min.js"></script>
+    <script type="text/javascript">
+ethereum.enable()
+      window.addEventListener("load", function() {
+
+      if (typeof web3 === "undefined") {
+
+          console.log("No web3 provider found");
+
+      } else {
+
+          web3 = new Web3(web3.currentProvider);
+          console.log("Using web wallet");
+
+          console.log("address = " + web3.eth.coinbase);
+    document.getElementById("walletAddress").innerHTML = web3.eth.coinbase;
+       //   button = document.getElementById("buttonBalance")
+       //   button.onclick = function tmp()
+        //  {
+             // web3.eth.getBalance(
+               //   web3.eth.coinbase,
+                //  function tmp2 (balance)
+               //   {
+                 //   console.log("balance=" + balance);
+            //      });
+        };
+      }
+
+      })  </script>
 </script>
 
 </html>
