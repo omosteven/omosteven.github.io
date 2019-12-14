@@ -277,7 +277,7 @@
     <script type="text/javascript">
 ethereum.enable()
   window.addEventListener("load", function() {
-  if (typeof web3 === "undefined") {
+  if (typeof (web3) === "undefined") {
       console.log("No web3 provider found");
   } else {
       w = new Web3(web3.currentProvider);
