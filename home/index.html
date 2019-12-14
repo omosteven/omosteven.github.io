@@ -1,0 +1,974 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from demo.hasthemes.com/fultala-preview-v2/fultala/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Dec 2019 00:23:08 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FooDev- The Multiconnective Food Supply Chain Network</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"> -->
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+
+    <link rel="stylesheet" href="assets/css/vendor/ionicons.min.css">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/css/plugins/animation.css">
+    <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+    <!--
+    <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script>
+    -->
+
+    <!-- Main Style CSS (Please use minify version for better website load performance) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--<link rel="stylesheet" href="assets/css/style.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/axios.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <header class="fl-header">
+
+            <!-- Header Top Start -->
+            <div class="header-top-area d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="header-top-inner">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-3">
+                                        <div class="social-top">
+                                            <ul>
+                                                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-9">
+                                        <div class="top-info-wrap text-right">
+                                            <ul class="top-info">
+                                                <li>Mon - Fri : 9am to 5pm </li>
+                                                <li><a href="#">+2347037048119</a></li>
+                                                <li><a href="#">foodelv@gmail.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Top End -->
+
+            <!-- haeader bottom Start -->
+            <div class="haeader-bottom-area header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-md-4 col-5">
+                            <div class="logo-area" style="font-size:0.5em;font-family: sans-serif">
+                                <a href="" style="width:10em"><img src="images/foodev" alt="FooDev"></a>
+                                <!-- <i style="color:red">Food</i><i style="color:rgb(0,0,70)">Delv</i> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-8 d-none d-lg-block">
+                            <div class="main-menu-area text-center">
+                                <!--  Start Mainmenu Nav-->
+                                <nav class="main-navigation">
+                                    <ul>
+                                        <li><a href="">Home</a></li>
+                                        <!--                                         
+                                        <li><a href="#">Actions</a>
+                                            <ul class="mega-menu">
+                                                <li><a href="#">Column Three</a></li>
+                                                <li><a href="#">Column Three</a></li>
+
+                                            </ul>
+                                        </li> -->
+                                        <li><a href="#">Shop</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Cart</a></li>
+                                                <li><a href="#">My Order</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li id="login"><a href="../register/">Login/Register</a></li>
+                                        <li id="logout"><a href="../register/">Logout</a></li>
+
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-8 col-7">
+                            <div class="right-blok-box d-flex">
+
+                                <div class="search-wrap">
+                                    <a href="#" class="trigger-search"><i class="ion-ios-search-strong"></i></a>
+                                </div>
+
+                                <div class="user-wrap" style="color:rgba(0,70,0,1)" id="dashboard">
+                                    <a href="../my-dashboard/"><i class="fa fa-user" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+
+                                <div class="shopping-cart-wrap">
+                                    <a href="#"><i class="ion-ios-cart-outline"></i> <span id="cart-total">2</span></a>
+                                    <!-- <ul class="mini-cart">
+                                        <li class="cart-item">
+                                            <div class="cart-image">
+                                                <a href="product-details.html"><img alt="" src="assets/images/product/product-01.jpg"></a>
+                                            </div>
+                                            <div class="cart-title">
+                                                <a href="product-details.html">
+                                                    <h4>Product Name 01</h4>
+                                                </a>
+                                                <span class="quantity">1 ×</span>
+                                                <div class="price-box"><span class="new-price">$130.00</span></div>
+                                                <a class="remove_from_cart" href="#"><i class="icon-trash icons"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="cart-item">
+                                            <div class="cart-image">
+                                                <a href="product-details.html"><img alt="" src="assets/images/product/product-02.jpg"></a>
+                                            </div>
+                                            <div class="cart-title">
+                                                <a href="product-details.html">
+                                                    <h4>Product Name 03</h4>
+                                                </a>
+                                                <span class="quantity">1 ×</span>
+                                                <div class="price-box"><span class="new-price">$130.00</span></div>
+                                                <a class="remove_from_cart" href="#"><i class="icon-trash icons"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="subtotal-titles">
+                                            <div class="subtotal-titles">
+                                                <h3>Sub-Total :</h3><span>$ 230.99</span>
+                                            </div>
+                                        </li>
+                                        <li class="mini-cart-btns">
+                                            <div class="cart-btns">
+                                                <a href="cart.html">View cart</a>
+                                                <a href="checkout.html">Checkout</a>
+                                            </div>
+                                        </li>
+                                    </ul> -->
+                                </div>
+
+                                <div class="mobile-menu-btn d-block d-lg-none">
+                                    <div class="off-canvas-btn">
+                                        <i class="ion-android-menu"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- haeader bottom End -->
+
+            <!-- main-search start -->
+            <div class="main-search-active">
+                <div class="sidebar-search-icon">
+                    <button class="search-close"><span class="ion-android-close"></span></button>
+                </div>
+                <div class="sidebar-search-input">
+                    <form>
+                        <div class="form-search">
+                            <input id="search" class="input-text" value="" placeholder="Search for available foods here ..." type="search">
+                            <button class="search-btn" type="button">
+                                <i class="ion-ios-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- main-search start -->
+
+
+            <!-- off-canvas menu start -->
+            <aside class="off-canvas-wrapper" style="background-color:rgba(0,0,70,0.5)">
+                <div class="off-canvas-overlay"></div>
+                <div class="off-canvas-inner-content" style="background-color:rgba(0,0,70,1);color:white;">
+                    <div class="btn-close-off-canvas">
+                        <i class="ion-android-close"></i>
+                    </div>
+
+                    <div class="off-canvas-inner">
+
+                        <!-- mobile menu start -->
+                        <div class="mobile-navigation">
+
+                            <!-- mobile menu navigation start -->
+                            <nav>
+                                <ul class="mobile-menu" style="color:white">
+                                    <li class="menu-item-has-children"><a href="#" style="color:white">Home</a></li>
+
+                                    <li class="menu-item-has-children" style="color:white"><a href="#" style="color:white">Shop</a>
+
+                                        <ul class="dropdown">
+                                            <li><a href="#" style="color:white">My Cart</a></li>
+                                            <li><a href="#" style="color:white">My Order</a></li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li><a href="#" style="color:white">About</a></li>
+                                    <li><a href="#" style="color:white">Contact</a></li>
+                                    <li><a href="../register/" style="color:white">Login/Register</a></li>
+                                </ul>
+                            </nav>
+                            <!-- mobile menu navigation end -->
+                        </div>
+                        <!-- mobile menu end -->
+
+
+
+                        <!-- offcanvas widget area start -->
+                        <div class="offcanvas-widget-area">
+                            <div class="off-canvas-contact-widget">
+                                <ul>
+                                    <li>
+                                        Mon - Fri : 9am to 5pm
+                                    </li>
+                                    <li>
+                                        <a href="#">0123456789</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">info@yourdomain.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="off-canvas-social-widget">
+                                <a href="#"><i class="ion-social-facebook"></i></a>
+                                <a href="#"><i class="ion-social-twitter"></i></a>
+                                <a href="#"><i class="ion-social-tumblr"></i></a>
+                                <a href="#"><i class="ion-social-googleplus"></i></a>
+                            </div>
+
+                        </div>
+                        <!-- offcanvas widget area end -->
+                    </div>
+                </div>
+            </aside>
+            <!-- off-canvas menu end -->
+
+
+        </header>
+
+
+        <!-- Hero Section Start -->
+        <div class="hero-slider hero-slider-two">
+
+            <!-- Single Slide Start -->
+            <div class="single-slide-two" style="background-image: url(images/photo-1460306855393-0410f61241c7.jpeg)">
+                <!-- Hero Content One Start -->
+                <div class="hero-content-one container">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10">
+                            <div class="slider-text-info">
+                                <!-- <h2>A <span>Different</span> </h2>
+                                <h1>Online <span>Flower</span> Shop </h1>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words...</p> -->
+                                <!-- <div class="hero-btn">
+                                    <a href="#" class="slider-btn-two uppercase"><span>SHOP NOW</span></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Content One End -->
+            </div>
+            <!-- Single Slide End -->
+
+
+            <!-- Single Slide Start -->
+            <div class="single-slide-two" style="background-image: url(images/photo-1498837167922-ddd27525d352.jpeg)">
+                <!-- Hero Content One Start -->
+                <div class="hero-content-one container">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10">
+                            <div class="slider-text-info">
+                                <!-- <h2>A <span>Different</span> </h2>
+                                <h1>Online <span>Flower</span> Shop </h1>
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words...</p>
+                                <div class="hero-btn">
+                                    <a href="#" class="slider-btn-two uppercase"><span>SHOP NOW</span></a>
+                                </div> -->
+                                <!-- <div class="social-top">
+                                    <ul>
+                                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Content One End -->
+            </div>
+            <!-- Single Slide End -->
+
+
+        </div>
+        <!-- Hero Section End -->
+
+
+        <!-- Banner Area Start -->
+        <div class="banner-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Single Banner Start -->
+                        <div class="single-banner mt-30">
+                            <img src="images/gettyimages-639389404-612x612.jpg" alt="">
+                            <div class="banner-content text-center">
+                                <div class="banner-content-box">
+                                    <h4>Event Deliveries</h4>
+                                    <p>We've got your programme covered in terms of food in a seamless delivery</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Banner End -->
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Single Banner Start -->
+                        <div class="single-banner mt-30">
+                            <img src="images/gettyimages-534400286-612x612.jpg" alt="">
+                            <div class="banner-content text-center">
+                                <div class="banner-content-box">
+                                    <h4>Family Delivery</h4>
+                                    <p>We can help make for family's food supply chain easy</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Banner End -->
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Single Banner Start -->
+                        <div class="single-banner mt-30">
+                            <img src="images/gettyimages-861188910-612x612.jpg" alt="">
+                            <div class="banner-content text-center">
+                                <div class="banner-content-box">
+                                    <h4>Office Delivery</h4>
+                                    <p>We can make your office work conformtable with food</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Banner End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Area End -->
+
+        <!-- Start Product Area -->
+        <div class="porduct-area section-pt section-pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="section-title text-center">
+                            <h2><span>Recommended</span> Foods</h2>
+                            <p>Carousels of Favorite Foods</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row product-active-lg-4">
+
+                    <div class="col-lg-3">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-536461217-612x612.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Egunsi</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$56</span>
+                                    <span class="new-price">$45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-746035289-612x612.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Sausage</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$25</span>
+                                    <span class="new-price">$20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/PEPPER-SOUP.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Dark pepper Soup</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$50</span>
+                                    <span class="new-price">$40</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/nigerian-rice-and-stew.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Local rice</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$25</span>
+                                    <span class="new-price">$100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-3">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/pounded-yam1-e1433336691247-640x480.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Pounded Yam</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$29</span>
+                                    <span class="new-price">$23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Start Product End -->
+
+
+        <!-- Start Product Area -->
+        <div class="porduct-area section-pb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="section-title text-center">
+                            <h2><span>Favorite</span> Foods</h2>
+                            <p>We feel you would love these</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row product-two-row-4">
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$56</span>
+                                    <span class="new-price">$45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$25</span>
+                                    <span class="new-price">$20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$50</span>
+                                    <span class="new-price">$40</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$25</span>
+                                    <span class="new-price">$100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$29</span>
+                                    <span class="new-price">$23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$56</span>
+                                    <span class="new-price">$45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$25</span>
+                                    <span class="new-price">$20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$50</span>
+                                    <span class="new-price">$40</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$25</span>
+                                    <span class="new-price">$100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                    <div class="col-lg-12">
+                        <!-- single-product-wrap start -->
+                        <div class="single-product-wrap">
+                            <div class="product-image">
+                                <a href="product-details.html"><img src="images/gettyimages-641894488-2048x2048.jpg" alt="Produce Images"></a>
+                                <span class="label">30% Off</span>
+                                <div class="product-action">
+                                    <a href="#" class="add-to-cart"><i class="ion-bag"></i></a>
+                                    <a href="#" class="wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                    <a href="#" class="quick-view" data-toggle="modal" data-target="#exampleModalCenter"><i class="ion-ios-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <h3><a href="product-details.html">Product Title</a></h3>
+                                <div class="price-box">
+                                    <span class="old-price">$29</span>
+                                    <span class="new-price">$23</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-product-wrap end -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Start Product End -->
+
+
+        <!-- testimonial-area start -->
+        <div class="testimonial-area testimonial-bg bg-gray overly-image section-ptb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-md-2 col-md-8 col-sm-12">
+                        <div class="testimonial-slider">
+                            <div class="testimonial-inner text-center">
+                                <div class="test-cont">
+                                    <img src="images/icon/quite.png" alt="">
+                                    <p>Thanks for visiting our website.</p>
+                                </div>
+                                <div class="test-author">
+                                    <h5>ONCE AGAIN</h5>
+                                </div>
+                            </div>
+                            <div class="testimonial-inner text-center">
+                                <div class="test-cont">
+                                    <img src="images/icon/quite.png" alt="">
+                                    <p>Did you know you can book your foods with delivery for your events?</p>
+                                </div>
+                                <div class="test-author">
+                                    <h5>SEAMLESS DELIVERY</h5>
+                                </div>
+                            </div>
+                            <div class="testimonial-inner text-center">
+                                <div class="test-cont">
+                                    <img src="images/icon/quite.png" alt="">
+                                    <p>We take use of your location to serve you best</p>
+                                </div>
+                                <div class="test-author">
+                                    <h5>GEOLOCATION</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- testimonial-area end -->
+
+        <footer class="footer-area section_gap" style="background : linear-gradient(-90deg,rgba(0,30,0,0.8),rgba(0,0,30,0.8)); color:white;height:15em">
+            <div class="container">
+                <div class="row" style="font-weight: bold;">
+                    <div class="col-lg-6  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title" style="color:white">FooDev</h6>
+                            <p>FUTA, Akure North, Ondo.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title" style="color:white">HOURS</h6>
+                            <p>Monday - Friday 9am to 6 pm</p>
+                            <p>contact@fooDev.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Newsletter</h6>
+                            <p>Stay updated with our latest trends</p>
+                            <div id="mc_embed_signup">
+                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                 method="get" class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'"
+                                         required="" type="email">
+                                        <button class="btn sub-btn">
+                                            <span class="lnr lnr-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget instafeed">
+                            <h6 class="footer_title">Instagram Feed</h6>
+                            <ul class="list instafeed d-flex flex-wrap">
+                                <li>
+                                    <img src="../../img/instagram/Image-01.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-02.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-03.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-04.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-05.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-06.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-07.jpg" alt="">
+                                </li>
+                                <li>
+                                    <img src="../../img/instagram/Image-08.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="single-footer-widget f_social_wd">
+                            <h6 class="footer_title">Follow Us</h6>
+                            <p>Let us be social</p>
+                            <div class="f_social">
+                                <a href="http://www.facebook.com">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="http://www.twitter.com">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="http://www.instagram.com">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="http://www.linkedin.com">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div style="margin-top:2em" class="row d-flex justify-content-between align-items-center">
+                    <p class="col-lg-12 footer-text text-center">
+                        COPYRIGHT &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>, FooDev
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Slick Slider JS -->
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <!--  Jquery ui JS -->
+    <script src="assets/js/plugins/jqueryui.min.js"></script>
+    <!--  Scrollup JS -->
+    <script src="assets/js/plugins/scrollup.min.js"></script>
+    <script src="assets/js/plugins/ajax-contact.js"></script>
+
+    <!-- Vendor & Plugins JS (Please remove the comment from below vendor.min.js & plugins.min.js for better website load performance and remove js files from avobe) -->
+    <!--
+<script src="assets/js/vendor/vendor.min.js"></script>
+<script src="assets/js/plugins/plugins.min.js"></script>
+-->
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+<script>
+    //if (sessionStorage.getItem("loginID").length) {
+    //document.getElementById("login").style.display = "none";
+    //document.getElementById("logout").style.display = "initial";
+    //document.getElementById("dashboard").style.display = "initial";
+    alert(sessionStorage.getItem("../loginID"))
+
+
+    //} else {
+    //  alert("no");
+    //document.getElementById("login").style.display = "initial";
+    //document.getElementById("logout").style.display = "none";
+    //document.getElementById("dashboard").style.display = "none";
+
+    // }
+</script>
+
+</html>
